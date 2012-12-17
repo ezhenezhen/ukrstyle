@@ -6,6 +6,7 @@ gem 'paperclip'
 gem 'devise', '~> 2.1.2'
 gem 'typus'
 gem 'jquery-rails'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

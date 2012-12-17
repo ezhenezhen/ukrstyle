@@ -1,0 +1,47 @@
+
+ul.yiiPager .first, ul.yiiPager .last {
+    display: none;
+}
+.pagination {
+    float: left;
+    margin: 20px 0;
+    width: 100%;
+}
+.pagination .hidden {
+    display: none;
+}
+.pagination ul {
+    float: right;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.pagination ul li {
+    float: left;
+    margin: 0 0 0 5px;
+}
+.pagination ul li a {
+    color: #7B7B7B;
+    text-decoration: none;
+}
+.pagination ul li.page a {
+    background: none repeat scroll 0 0 #B8B8B8;
+    color: #FFFFFF;
+    float: left;
+    font-size: 9px;
+    font-weight: bold;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    width: 14px;
+}
+.forward a {
+    color: #7B7B7B;
+    font-size: 12px;
+}
+.pagination ul li.next {
+    margin-top: -1px;
+}
+.pagination ul li.selected a {
+    background: none repeat scroll 0 0 #868686;
+}

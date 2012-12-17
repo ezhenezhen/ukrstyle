@@ -1,4 +1,14 @@
 Ukrstyle::Application.routes.draw do
+  root :to => 'products#index'
+  resources :products
+
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +58,7 @@ Ukrstyle::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 

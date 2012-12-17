@@ -1,0 +1,20 @@
+@charset "utf-8";
+body {
+    font: 13px Arial,Helvetica,Garuda,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+li, em, strong, pre, code {
+    margin: 0;
+    padding: 0;
+}
+table {
+    font-size: inherit;
+}
+img {
+    border: 0 none;
+}
+.clearb {
+    clear: both;
+    display: block;
+}
