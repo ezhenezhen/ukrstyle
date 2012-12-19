@@ -1,50 +1,52 @@
 
-    <div class="content_r_head"> Каталог </div>
-    <% if @products.length==0  %>
-    Каталог пуст
-
-<% else %>
-
-    <% @products.each do |item| %>
-
-        <div class="product">
-
-          <div class="product_pic">
-            <%= link_to image_tag(assets.object.photo.url(:small), :alt => item.name), item %>
-          </div>
-
-          <% if item.available == false %>
-              <div class="not-in-stock"> Нет в наличии </div>
-          <% else %>
-              <div class="stock"> Есть в наличии </div>
-          <% end %>
-
-          <div class="product_text">
-            <table>
-              <tbody>
-              <tr>
-                <td><%=link_to item.name, item %></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+<div class="content_r_head"> Каталог </div>
 
 
-          <div class="product_price_grey">
-            <%= item.price %>
-            <span> грн</span>
-          </div>
+<% @products_paginated.each do |item| %>
 
-          <div class="product_order">
-            <% if item.available %>
-                <%= image_tag("order_button.png") %>
-            <% else  %>
-                <%= image_tag("pre_order_button.png") %>
-            <% end %>
-          </div>
-        </div>
+    <div class="product">
 
-    <% end %>
+      <div class="product_pic">
+        <% if item.assets.size > 0 %>
+            <%= link_to image_tag(item.assets.first.asset.url(:thumb), :alt => item.name), item %>
+        <% end %>
+      </div>
 
-    <%= will_paginate @products %>
+      <% if item.available == false %>
+          <div class="not-in-stock"><%= link_to "Нет в наличии", item %> </div>
+      <% else %>
+          <div class="stock"> <%= link_to "Есть в наличии", item  %> </div>
+      <% end %>
+
+      <div class="product_text">
+        <table>
+          <tbody>
+          <tr>
+            <td><%= link_to item.name, item %></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="product_price_grey">
+        <%= item.price %>
+        <span> грн</span>
+      </div>
+
+      <div class="product_order">
+        <% if item.available %>
+            <%= image_tag("order_button.png") %>
+        <% else  %>
+            <%= image_tag("pre_order_button.png") %>
+        <% end %>
+      </div>
+    </div>
+
+
 <% end %>
+<div class ="pagination">
+<%= will_paginate @products_paginated %>
+</div>
+
+

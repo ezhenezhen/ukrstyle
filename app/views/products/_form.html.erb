@@ -1,21 +1,35 @@
 <p>
-   <%= form_for(@product, :html => {:multipart => true}) do |f| %>
-  <%= f.error_messages %>
-  <%= f.label 'Цена:' %><br />
-  <%= f.text_field :price %><br />
-  <%= f.label 'Название:' %><br />
-  <%= f.text_field :name %><br />
-  <%= f.label 'Описание:' %><br />
-  <%= f.text_area :description %><br />
-  <%= f.label 'Наличие:' %>
-  <%= f.check_box :available %><br />
-  <%= f.label 'Фото:' %>   <br />
-  <%= f.fields_for :assets do |asset| %>
-      <% if asset.object.new_record? %>
-          <%= asset.file_field :assets %><br >
-          <% end %>
+  <%= form_for(@product, :html => {:multipart => true}) do |f| %>
+      <%= f.error_messages %>
+      <%= f.label 'Цена:' %><br />
+      <%= f.text_field :price %><br />
+      <%= f.label 'Название:' %><br />
+      <%= f.text_field :name %><br />
+      <%= f.label 'Описание:' %><br />
+      <%= f.text_area :description %><br />
+      <%= f.label 'Наличие:' %>
+      <%= f.check_box :available %><br /><br />
+      <%= f.label 'Фото:' %>   <br />
 
-  <% end %>
+
+      <% number = 0 %>
+      <%= f.fields_for :assets do |asset| %>
+          <% if asset.object.new_record? %>
+              <p>
+                <%= asset.label :asset, "File ##{number +=1}" %>
+                <%= asset.file_field :asset %>
+              </p>
+          <% end %>
+      <% end %>
+
+      <%= f.fields_for :assets do |asset| %>
+          <% unless asset.object.new_record? %>
+              <p>
+                <%= image_tag asset.object.asset.url(:thumb) %>
+              </p>
+          <% end %>
+      <% end %>
+
       <%= f.submit %>
   <% end %>
-</p>
+  </p>

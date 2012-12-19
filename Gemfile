@@ -7,10 +7,15 @@ gem 'devise', '~> 2.1.2'
 gem 'typus'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'cancan'
+gem 'paperclip'
+gem 'dynamic_form'
+gem 'railties'
+
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 

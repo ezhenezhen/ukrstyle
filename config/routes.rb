@@ -1,5 +1,5 @@
 Ukrstyle::Application.routes.draw do
-  root :to => 'products#index'
+  root :to => 'main#index'
   resources :products
 
   match '/about', :to => 'pages#about'

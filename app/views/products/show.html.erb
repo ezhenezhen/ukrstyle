@@ -1,9 +1,11 @@
 <% if @product.nil? %>
 
-    <% else %>
+<% else %>
     <div class="content_r"><div class="content_r_head"> <%= @product.product_type %></div>
       <div class="more_l">
-        <%=  image_tag(@product.photo.url(:small), :alt => @product.name)%>
+        <% if @product.assets.first %>
+        <%= image_tag @product.assets.first.asset.url(:thumb) %>
+            <% end %>
       </div>
       <div class="more_r">
         <h1><%= @product.name %></h1>
@@ -17,7 +19,6 @@
         <div class="more_r_r">
           <div class="more_order">
             <a href="/index.php/order/put/269?quantity=1">
-              Каталог пуст
             </a>
           </div>
           <% if @product.available == false %>
@@ -36,20 +37,26 @@
         <div class="min_order">  Минимальный заказ: <%= @product.minimal_quantity %> шт. </div>
         <div class="more_pics">
           <div class="more_pic">
-            <a class="fancybox" rel="product" href="/storage/product/large_16Jul2012_18-58-01arnaya_polka_urakami_-_ogdana_melnickogo_10_1_jpg.jpg">
+            <% if @product.assets[1] %>
+            <%= image_tag @product.assets[1].asset.url(:small) %>
+                <% end %>
           </div>
           <div class="more_pic">
-            <a class="fancybox" rel="product" href="/storage/product/large_16Jul2012_18-53-12arnaya_polka_urakami_-_estivalnyy_2_jpg.jpg">
+            <% if @product.assets[2] %>
+            <%= image_tag @product.assets[2].asset.url(:small) %>
+                <% end %>
           </div>
           <div class="more_pic">
-            <a class="fancybox" rel="product" href="/storage/product/large_16Jul2012_18-57-54arnaya_polka_urakami_-_estivalnyy_1_jpg.jpg">
-          </div>
+            <% if @product.assets[3] %>
+                <%= image_tag @product.assets[2].asset.url(:small) %>
+                <% end  %>
+            </div>
         </div>
       </div>
       <div class="more_tabs">
         <ul>
           <li>
-            <a class="active" href="#">Описание товара</a>
+            <a class="active">Описание товара</a>
           </li>
         </ul>
         <div class="more_tab">

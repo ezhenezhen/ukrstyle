@@ -1,0 +1,203 @@
+
+div.form {
+}
+div.form input, div.form textarea, div.form select {
+    margin: 0.2em 0 0.5em;
+}
+div.form fieldset {
+    border: 1px solid #DDDDDD;
+    margin: 0 0 10px;
+    padding: 10px;
+}
+div.form label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+div.form .row {
+    margin: 5px 0;
+}
+div.form .hint {
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
+div.form .note {
+    font-style: italic;
+}
+div.form span.required {
+    color: red;
+}
+div.form div.error label, div.form label.error, div.form span.error {
+    color: #CC0000;
+}
+div.form div.error input, div.form div.error textarea, div.form div.error select, div.form input.error, div.form textarea.error, div.form select.error {
+    background: none repeat scroll 0 0 #FFEEEE;
+    border-color: #CC0000;
+}
+div.form div.success input, div.form div.success textarea, div.form div.success select, div.form input.success, div.form textarea.success, div.form select.success {
+    background: none repeat scroll 0 0 #E6EFC2;
+    border-color: #C6D880;
+}
+div.form .errorSummary {
+    background: none repeat scroll 0 0 #FFEEEE;
+    border: 2px solid #CC0000;
+    font-size: 0.9em;
+    margin: 0 0 20px;
+    padding: 7px 7px 12px;
+}
+div.form .errorMessage {
+    color: red;
+    font-size: 0.9em;
+}
+div.form .errorSummary p {
+    margin: 0;
+    padding: 5px;
+}
+div.form .errorSummary ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+div.wide.form label {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    text-align: right;
+    width: 100px;
+}
+div.wide.form .row {
+    clear: left;
+}
+div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage {
+    clear: left;
+    padding-left: 110px;
+}
+div.form div.error label, div.form label.error, div.form span.error {
+    color: #CC0000;
+}
+div.form tr.error input, div.form tr.error textarea, div.form tr.error select, div.form input.error, div.form textarea.error, div.form select.error {
+    background: none repeat scroll 0 0 #FFEEEE;
+    border-color: #CC0000;
+}
+div.form tr.success input, div.form tr.success textarea, div.form tr.success select, div.form input.success, div.form textarea.success, div.form select.success {
+    background: none repeat scroll 0 0 #E6EFC2;
+    border-color: #C6D880;
+}
+div.form tr.error label, div.form label.error, div.form span.error {
+    color: #CC0000;
+}
+.sort {
+    color: #333333;
+    float: left;
+    margin: 0 0 15px 15px;
+    width: 730px;
+}
+.dynamic_head {
+    color: #333333;
+    float: left;
+    font-size: 18px;
+    margin: 20px 2% 15px;
+    width: 96%;
+}
+.dynamic_content {
+    float: left;
+    margin: 0 2% 15px;
+    width: 96%;
+}
+.sort a {
+    color: #333333;
+    margin: 0 0 0 10px;
+}
+#yw1 {
+    float: left;
+}
+#yw1_button {
+    clear: both;
+    float: left;
+    margin: 5px 0;
+}
+.fancybox-inner h1 {
+    font-size: 28px;
+}
+.empty_category {
+    color: #333333;
+    float: left;
+    font-size: 16px;
+    width: 100%;
+}
+.dynamic_content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.dynamic_content table tr td {
+    border-bottom: 1px solid #A0B6D0;
+    border-top: 1px solid #A0B6D0;
+    color: #1A1A1A;
+    font-size: 15px;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+.dynamic_content table tr td select {
+    color: #1A1A1A;
+    font-size: 15px;
+    font-weight: bold;
+}
+.delivery-radio td {
+    vertical-align: top !important;
+}
+.dynamic_content table tr td a {
+    color: #104889;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.dynamic_content thead {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.dynamic_content thead tr th {
+    border-bottom: 1px solid #A0B6D0;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    text-align: left;
+}
+.dynamic_content .form table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.dynamic_content .form table tr td {
+    border: medium none;
+    color: #000000;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+}
+.dynamic_content .form table tr td h3 {
+    margin: 0;
+}
+.dynamic_content .form table tr td p {
+    margin: 0;
+}
+.total_line {
+    margin: 20px 0 0;
+}
+.total_sum {
+    font-size: 18px;
+    font-style: italic;
+}
+.total_sum span {
+    font-size: 22px;
+    text-decoration: underline;
+}
+#subtotal_price {
+    color: #1A1A1A;
+    font-size: 18px;
+    font-weight: bold;
+}
+.subtotal h3 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: right;
+}
