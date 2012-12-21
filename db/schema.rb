@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219112918) do
+ActiveRecord::Schema.define(:version => 20121221114911) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20121219112918) do
     t.datetime "updated_at",         :null => false
   end
 
-  create_table "general_type", :force => true do |t|
+  create_table "general_types", :force => true do |t|
     t.string "category"
   end
 
@@ -35,8 +35,9 @@ ActiveRecord::Schema.define(:version => 20121219112918) do
     t.boolean  "available",        :default => true
     t.integer  "minimal_quantity", :default => 1
     t.string   "description"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.boolean  "showing",          :default => false
   end
 
 end

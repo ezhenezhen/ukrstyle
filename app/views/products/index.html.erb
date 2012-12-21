@@ -29,10 +29,17 @@
       </div>
 
 
-      <div class="product_price_grey">
-        <%= item.price %>
-        <span> грн</span>
-      </div>
+      <% if item.available %>
+          <div class="product_price">
+            <%= item.price %>
+            <span> грн</span>
+          </div>
+      <% else %>
+          <div class="product_price_grey">
+            <%= item.price %>
+            <span> грн</span>
+          </div>
+      <% end %>
 
       <div class="product_order">
         <% if item.available %>

@@ -1,5 +1,8 @@
 <p>
   <%= form_for(@product, :html => {:multipart => true}) do |f| %>
+
+      <%= select("product", "general_type_id", GeneralType.all.collect {|p| [ p.category, p.id ] }, {:include_blank => 'Выберите тип товара ->>>'})  %><br />
+
       <%= f.error_messages %>
       <%= f.label 'Цена:' %><br />
       <%= f.text_field :price %><br />

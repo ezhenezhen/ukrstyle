@@ -1,0 +1,49 @@
+<div class="content_r_head"> Обратите внимание </div>
+<% if @productsMain %>
+    <% @productsMain.each do |item| %>
+        <div class="product">
+
+          <div class="product_pic">
+            <% if item.assets.size > 0 %>
+                <%= link_to image_tag(item.assets.first.asset.url(:thumb), :alt => item.name), item %>
+            <% end %>
+          </div>
+
+          <% if item.available == false %>
+              <div class="not-in-stock"> Нет в наличии </div>
+          <% else %>
+              <div class="stock"> <%= link_to "Есть в наличии", item %> </div>
+          <% end %>
+
+          <div class="product_text">
+            <table>
+              <tbody>
+              <tr>
+                <td><%= link_to item.name, item %></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <% if item.available %>
+              <div class="product_price">
+                <%= item.price %>
+                <span> грн</span>
+              </div>
+          <% else %>
+              <div class="product_price_grey">
+                <%= item.price %>
+                <span> грн</span>
+              </div>
+          <% end %>
+
+          <div class="product_order">
+            <% if item.available %>
+                <%= image_tag("order_button.png") %>
+            <% else  %>
+                <%= image_tag("pre_order_button.png") %>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
+<% end %>
