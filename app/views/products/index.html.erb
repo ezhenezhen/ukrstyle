@@ -13,9 +13,9 @@
       </div>
 
       <% if item.available == false %>
-          <div class="not-in-stock"><%= link_to "Нет в наличии", item %> </div>
+          <div class="not-in-stock"> Нет в наличии </div>
       <% else %>
-          <div class="stock"> <%= link_to "Есть в наличии", item  %> </div>
+          <div class="stock"> <%= link_to "Есть в наличии", item %> </div>
       <% end %>
 
       <div class="product_text">

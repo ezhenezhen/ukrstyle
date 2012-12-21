@@ -1,10 +1,26 @@
+<!--Fancybox script-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+
+
+
+
+</script>
+
+
+
+
+
 <% if @product.nil? %>
+    <%= redirect_to products_path %>
 
 <% else %>
     <div class="content_r"><div class="content_r_head"> <%= @product.product_type %></div>
       <div class="more_l">
         <% if @product.assets.first %>
-        <%= image_tag @product.assets.first.asset.url(:thumb) %>
+            <a class="fancybox" rel="group" href=<%= @product.assets[0].asset.url(:large) %><img src="<%= image_tag @product.assets[0].asset.url(:thumb) %><%= image_tag @product.assets[0].asset.url(:thumb) %></a>
             <% end %>
       </div>
       <div class="more_r">
@@ -38,18 +54,18 @@
         <div class="more_pics">
           <div class="more_pic">
             <% if @product.assets[1] %>
-            <%= image_tag @product.assets[1].asset.url(:small) %>
+                <a class="fancybox" rel="group" href=<%= @product.assets[1].asset.url(:large) %><img src="<%= image_tag @product.assets[1].asset.url(:thumb) %><%= image_tag @product.assets[1].asset.url(:small) %></a>
                 <% end %>
           </div>
           <div class="more_pic">
             <% if @product.assets[2] %>
-            <%= image_tag @product.assets[2].asset.url(:small) %>
+                <a class="fancybox" rel="group" href=<%= @product.assets[2].asset.url(:large) %><img src="<%= image_tag @product.assets[2].asset.url(:thumb) %><%= image_tag @product.assets[2].asset.url(:small) %></a>
                 <% end %>
           </div>
           <div class="more_pic">
             <% if @product.assets[3] %>
-                <%= image_tag @product.assets[2].asset.url(:small) %>
-                <% end  %>
+                <a class="fancybox" rel="group" href=<%= @product.assets[3].asset.url(:large) %><img src="<%= image_tag @product.assets[3].asset.url(:thumb) %><%= image_tag @product.assets[3].asset.url(:small) %></a>
+                <% end %>
             </div>
         </div>
       </div>
