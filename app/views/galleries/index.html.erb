@@ -1,0 +1,56 @@
+<!--Fancybox script-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+
+
+<div class="content">
+  <div class="portfolio_head">
+    Наши проекты
+  </div>
+
+  <% @galleries_paginated.each do |gallery| %>
+
+      <% if gallery.assets  %>
+          <% 1.upto(gallery.assets.size - 1) do |i| %>
+              <a class="fancybox" rel=<%= gallery.name %> href="<%= gallery.assets[i].asset.url(:large) %>"
+              <img src="<%= image_tag gallery.assets[i].asset.url(:thumb) %></a>
+      <% end %>
+      <% end %>
+
+
+      <div class="portfolio">
+      <% if gallery.assets[0] %>
+          <a class="fancybox" rel=<%= gallery.name %> href="<%= gallery.assets[0].asset.url(:large) %>">
+      <% end %>
+      <div class="portfolio_pic">
+        <% if gallery.assets[0] %>
+            <%=image_tag gallery.assets[0].asset(:gall) %>
+        <% end %>
+      </div>
+      <div class="portfolio_text gradient">
+        <table>
+          <tr>
+            <% if gallery.name %>
+                <td><%= gallery.name %></td>
+            <% end %>
+          </tr>
+        </table>
+      </div>
+      </a>
+      </div>
+
+
+
+  <% end %>
+
+
+
+  <%= will_paginate @galleries_paginated %>
+  </div>
+
+
+
+

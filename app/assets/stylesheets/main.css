@@ -518,6 +518,7 @@
     text-decoration: none;
 }
 .portfolio_pic {
+    margin-left: ;
     float: left;
     height: 150px;
     overflow: hidden;

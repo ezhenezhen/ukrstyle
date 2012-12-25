@@ -1,9 +1,15 @@
 Ukrstyle::Application.routes.draw do
+  resources :files
+  resources :galleries
+
+
   root :to => 'main#index'
   resources :products
 
   match '/about', :to => 'main#about'
   match '/contact', :to => 'main#contact'
+
+
 
 
 

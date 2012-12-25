@@ -3,16 +3,12 @@
     $(document).ready(function() {
         $(".fancybox").fancybox();
     });
-
-
-
-
 </script>
 
 
 
 
-
+      <%= notice %>
 <% if @product.nil? %>
     <%= redirect_to products_path %>
 
@@ -20,7 +16,9 @@
     <div class="content_r"><div class="content_r_head"> <%= @product.product_type %></div>
       <div class="more_l">
         <% if @product.assets.first %>
-            <a class="fancybox" rel="group" href=<%= @product.assets[0].asset.url(:large) %><img src="<%= image_tag @product.assets[0].asset.url(:thumb) %><%= image_tag @product.assets[0].asset.url(:thumb) %></a>
+            <a class="fancybox" rel="group" href=<%= @product.assets[0].asset.url(:large) %>
+                    <img src="<%= image_tag @product.assets[0].asset.url(:thumb) %>
+                    <%= image_tag @product.assets[0].asset.url(:thumb) %></a>
             <% end %>
       </div>
       <div class="more_r">

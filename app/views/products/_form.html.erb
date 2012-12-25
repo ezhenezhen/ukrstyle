@@ -1,9 +1,8 @@
 <p>
   <%= form_for(@product, :html => {:multipart => true}) do |f| %>
 
-      <%= select("product", "general_type_id", GeneralType.all.collect {|p| [ p.category, p.id ] }, {:include_blank => 'Выберите тип товара ->>>'})  %><br />
-
       <%= f.error_messages %>
+      <%= select("product", "general_type_id", GeneralType.all.collect {|p| [ p.category, p.id ] }, {:include_blank => 'Выберите тип товара ->>>'})  %><br /><br />
       <%= f.label 'Цена:' %><br />
       <%= f.text_field :price %><br />
       <%= f.label 'Название:' %><br />
@@ -19,7 +18,7 @@
       <%= f.fields_for :assets do |asset| %>
           <% if asset.object.new_record? %>
               <p>
-                <%= asset.label :asset, "File ##{number +=1}" %>
+                <%= asset.label :asset, "Фото ##{number +=1}" %>
                 <%= asset.file_field :asset %>
               </p>
           <% end %>
@@ -33,6 +32,6 @@
           <% end %>
       <% end %>
 
-      <%= f.submit %>
+      <%= f.submit "Создать товар" %>
   <% end %>
   </p>

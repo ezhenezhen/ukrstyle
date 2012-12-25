@@ -4,7 +4,7 @@ var sliderOptions=
 	effect: "series1",
 	effectRandom: false,
 	pauseTime: 0,
-	transitionTime: 500,
+	transitionTime: 1000,
 	slices: 12,
 	boxes: 8,
 	hoverPause: false,

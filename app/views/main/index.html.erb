@@ -1,3 +1,53 @@
+<!--Fancybox script-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+
+
+
+<div class="content_r_head"> Наши проекты </div>
+<div class="projects gradient">
+
+  <% n=0 %>
+  <% while n < @galleriesMain.size %>
+  <div class="project">
+
+        <% i=1 %>
+        <% @assets_size = @galleriesMain[n].assets.size %>
+
+
+        <% while i < @assets_size %>
+            <a class="fancybox" rel="<%= @galleriesMain[n].name %>"
+               href="<%= @galleriesMain[n].assets[i].asset.url(:large) %>">
+              <% i+=1 %>
+        <% end %>
+
+
+        <a class="fancybox" rel="<%= @galleriesMain[n].name %>"
+           href="<%= @galleriesMain[n].assets[0].asset.url(:large) %>">
+          <img src="<%= @galleriesMain[n].assets[0].asset.url(:gall) %>"</a>
+        <div class="project_text gradient">
+          <table>
+            <tr>
+              <td><%= @galleriesMain[n].name %></td>
+            </tr>
+          </table>
+        </div>
+        </a>
+
+        <% n+=1 %>
+
+  </div>
+  <% end %>
+</div>
+
+
+
+
+
+
 <div class="content_r_head"> Обратите внимание </div>
 <% if @productsMain %>
     <% @productsMain.each do |item| %>
