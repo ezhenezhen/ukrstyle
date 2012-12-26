@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem 'sqlite3'
+end
 
 group :production do
   gem 'pg'
@@ -16,6 +19,7 @@ gem 'paperclip'
 gem 'dynamic_form'
 gem 'railties'
 gem 'taps'
+gem 'sprockets'
 
 
 group :assets do
