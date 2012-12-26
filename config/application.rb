@@ -53,8 +53,11 @@ module Ukrstyle
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    config.assets.initialize_on_precompile = false
+
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.compile = true
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
