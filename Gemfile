@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-
-
-
-
 gem 'pg'
 gem 'rails', '3.2.9'
 gem 'paperclip'
