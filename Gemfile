@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'pg'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+
+group :production do
+  gem 'pg'
+end
+
 gem 'rails', '3.2.9'
 gem 'paperclip'
 gem 'devise', '~> 2.1.2'
@@ -12,7 +20,6 @@ gem 'paperclip'
 gem 'dynamic_form'
 gem 'railties'
 gem 'taps'
-gem 'thin'
 
 
 group :assets do
