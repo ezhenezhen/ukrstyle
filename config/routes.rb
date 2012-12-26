@@ -1,4 +1,10 @@
 Ukrstyle::Application.routes.draw do
+  resources :line_items
+
+
+  resources :carts
+
+
   resources :files
   resources :galleries
 

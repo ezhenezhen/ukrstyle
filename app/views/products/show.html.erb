@@ -37,12 +37,12 @@
           </div>
           <% if @product.available == false %>
               <div class="more_order">
-                <%= image_tag("more_pre_order_button.png") %>
+                <%=link_to image_tag("more_pre_order_button.png"), line_items_path(:product_id => @product),:method => :post %>
               </div>
               <div class="more-not-in-stock"> Нет в наличии </div>
           <% else %>
               <div class="more_order">
-                <%= image_tag("more_order_button.png") %>
+                <%=link_to image_tag("more_order_button.png"), line_items_path(:product_id => @product), :method => :post %>
               </div>
               <div class="more_stock"> Есть в наличии </div>
           <% end %>
