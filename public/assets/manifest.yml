@@ -81,8 +81,8 @@ application.js: application-1c4c0cbad792a7eec182bedfab5cb53b.js
 application/index.js: application-1c4c0cbad792a7eec182bedfab5cb53b.js
 typus/application.js: typus/application-336a9dc29d98cc2b3f2224db076908f2.js
 typus/application/index.js: typus/application-336a9dc29d98cc2b3f2224db076908f2.js
-typus/application.css: typus/application-04aed0bc6e0056198fb6169bf721b2d8.css
-typus/application/index.css: typus/application-04aed0bc6e0056198fb6169bf721b2d8.css
+typus/application.css: typus/application-f677d550bf532df5a1f6c5553f06e2a6.css
+typus/application/index.css: typus/application-f677d550bf532df5a1f6c5553f06e2a6.css
 images/h1.png: images/h1-2df16a4ddf0b60cc2f3e7b585f758785.png
 images/h1/index.png: images/h1-2df16a4ddf0b60cc2f3e7b585f758785.png
 LICENSE.md: LICENSE-7fd4d17cfca42ef398cfbd7f6ba45bc6.md
