@@ -7,4 +7,3 @@ production:
   username: postgres
   port: 5432
   password: admin
-  host: localhost
