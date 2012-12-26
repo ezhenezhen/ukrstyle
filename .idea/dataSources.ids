@@ -72,4 +72,18 @@
       <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Rails ukrstyle: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="901a2e38-0f19-427b-847a-abefff9dd761">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql://127.0.0.1:5432/ddb</jdbc-url>
+    <user-name>postgres</user-name>
+    <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+      </library>
+    </libraries>
+  </data-source>
 </component>
