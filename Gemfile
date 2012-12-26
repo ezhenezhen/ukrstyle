@@ -19,6 +19,7 @@ gem 'cancan'
 gem 'paperclip'
 gem 'dynamic_form'
 gem 'railties'
+gem 'taps'
 
 
 group :assets do
