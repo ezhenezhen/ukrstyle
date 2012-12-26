@@ -1,7 +1,15 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+
+group :production do
+  'pg'
+end
+
 gem 'rails', '3.2.9'
-gem 'sqlite3'
 gem 'paperclip'
 gem 'devise', '~> 2.1.2'
 gem 'typus'

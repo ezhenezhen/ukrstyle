@@ -47,7 +47,6 @@
 
 
 
-
 <div class="content_r_head"> Обратите внимание </div>
 <% if @productsMain %>
     <% @productsMain.each do |item| %>
@@ -55,7 +54,8 @@
 
           <div class="product_pic">
             <% if item.assets.size > 0 %>
-                <%= link_to image_tag(item.assets.first.asset.url(:thumb), :alt => item.name), item %>
+                <%= link_to image_tag(item.assets.first.asset.url(:thumb),
+                                      :alt => item.name), item %>
             <% end %>
           </div>
 
@@ -89,9 +89,11 @@
 
           <div class="product_order">
             <% if item.available %>
-                <%= image_tag("order_button.png") %>
+                <%=link_to image_tag("order_button.png"), line_items_path(:product_id => item),
+                           :method => :post %>
             <% else  %>
-                <%= image_tag("pre_order_button.png") %>
+                <%=link_to image_tag("pre_order_button.png"), line_items_path(:product_id => item),
+                           :method => :post %>
             <% end %>
           </div>
         </div>

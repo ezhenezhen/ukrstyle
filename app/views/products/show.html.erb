@@ -37,12 +37,14 @@
           </div>
           <% if @product.available == false %>
               <div class="more_order">
-                <%=link_to image_tag("more_pre_order_button.png"), line_items_path(:product_id => @product),:method => :post %>
+                <%=link_to image_tag("more_pre_order_button.png"), line_items_path(:product_id => @product),
+                           :method => :post %>
               </div>
               <div class="more-not-in-stock"> Нет в наличии </div>
           <% else %>
               <div class="more_order">
-                <%=link_to image_tag("more_order_button.png"), line_items_path(:product_id => @product), :method => :post %>
+                <%=link_to image_tag("more_order_button.png"), line_items_path(:product_id => @product),
+                           :method => :post %>
               </div>
               <div class="more_stock"> Есть в наличии </div>
           <% end %>
@@ -52,17 +54,23 @@
         <div class="more_pics">
           <div class="more_pic">
             <% if @product.assets[1] %>
-                <a class="fancybox" rel="group" href=<%= @product.assets[1].asset.url(:large) %><img src="<%= image_tag @product.assets[1].asset.url(:thumb) %><%= image_tag @product.assets[1].asset.url(:small) %></a>
+                <a class="fancybox" rel="group" href=<%= @product.assets[1].asset.url(:large) %>
+                        <img src="<%= image_tag @product.assets[1].asset.url(:thumb) %>
+                        <%= image_tag @product.assets[1].asset.url(:small) %></a>
                 <% end %>
           </div>
           <div class="more_pic">
             <% if @product.assets[2] %>
-                <a class="fancybox" rel="group" href=<%= @product.assets[2].asset.url(:large) %><img src="<%= image_tag @product.assets[2].asset.url(:thumb) %><%= image_tag @product.assets[2].asset.url(:small) %></a>
+                <a class="fancybox" rel="group" href=<%= @product.assets[2].asset.url(:large) %>
+                        <img src="<%= image_tag @product.assets[2].asset.url(:thumb) %>
+                <%= image_tag @product.assets[2].asset.url(:small) %></a>
                 <% end %>
           </div>
           <div class="more_pic">
             <% if @product.assets[3] %>
-                <a class="fancybox" rel="group" href=<%= @product.assets[3].asset.url(:large) %><img src="<%= image_tag @product.assets[3].asset.url(:thumb) %><%= image_tag @product.assets[3].asset.url(:small) %></a>
+                <a class="fancybox" rel="group" href=<%= @product.assets[3].asset.url(:large) %>
+                        <img src="<%= image_tag @product.assets[3].asset.url(:thumb) %>
+                <%= image_tag @product.assets[3].asset.url(:small) %></a>
                 <% end %>
             </div>
         </div>
