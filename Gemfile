@@ -3,10 +3,8 @@ source 'https://rubygems.org'
 
 
 
-group :production do
-  'pg'
-end
 
+gem 'pg'
 gem 'rails', '3.2.9'
 gem 'paperclip'
 gem 'devise', '~> 2.1.2'
@@ -18,6 +16,7 @@ gem 'paperclip'
 gem 'dynamic_form'
 gem 'railties'
 gem 'taps'
+gem 'thin'
 
 
 group :assets do
