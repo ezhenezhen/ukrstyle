@@ -72,7 +72,7 @@
       <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12" />
     </table>
   </data-source>
-  <data-source source="LOCAL" name="Rails ukrstyle: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="ce7cb4fa-dad3-4e87-b829-7b391a0b0a73">
+  <data-source source="LOCAL" name="Rails ukrstyle: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="f6ce023d-4570-4c02-9788-5c701b45168c">
     <jdbc-driver>org.postgresql.Driver</jdbc-driver>
     <jdbc-url>jdbc:postgresql://127.0.0.1:5432/ddb</jdbc-url>
     <user-name>postgres</user-name>
