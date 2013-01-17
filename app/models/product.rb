@@ -17,4 +17,8 @@ class Product < ActiveRecord::Base
       return false
     end
   end
+
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
 end

@@ -8,7 +8,7 @@ group :production do
   gem 'pg'
 end
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 gem 'paperclip'
 gem 'devise', '~> 2.1.2'
 gem 'typus'
@@ -20,6 +20,7 @@ gem 'dynamic_form'
 gem 'railties'
 gem 'taps'
 gem 'sprockets'
+gem 'russian'
 
 
 group :assets do

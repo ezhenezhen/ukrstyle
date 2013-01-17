@@ -1,5 +1,6 @@
-
+<% if controller_name == 'products' %>
 <div class="content_r_head"> Каталог </div>
+    <% end %>
 
 
 <% @products_paginated.each do |item| %>

@@ -4,6 +4,7 @@ Ukrstyle::Application.routes.draw do
 
   resources :carts
 
+  resources :categories
 
   resources :files
   resources :galleries

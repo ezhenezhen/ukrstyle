@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20121225232028) do
   end
 
   create_table "general_types", :force => true do |t|
-    t.string "category"
+    t.string "categories"
   end
 
   create_table "line_items", :force => true do |t|
