@@ -2,7 +2,7 @@
   <%= form_for(@product, :html => {:multipart => true}) do |f| %>
 
       <%= f.error_messages %>
-      <%= select("product", "general_type_id", GeneralType.all.collect {|p| [ p.category, p.id ] }, {:include_blank => 'Выберите тип товара ->>>'})  %><br /><br />
+      <%= select("product", "general_type_id", GeneralType.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'Выберите тип товара ->>>'})  %><br /><br />
       <%= f.label 'Цена:' %><br />
       <%= f.text_field :price %><br />
       <%= f.label 'Название:' %><br />
@@ -11,6 +11,8 @@
       <%= f.text_area :description %><br />
       <%= f.label 'Наличие:' %>
       <%= f.check_box :available %><br /><br />
+      <%= f.label 'Минимальное количество' %><br />
+      <%= f.text_field :minimal_quantity %>        <br /><br /><br />
       <%= f.label 'Фото:' %>   <br />
 
 
@@ -28,6 +30,7 @@
           <% unless asset.object.new_record? %>
               <p>
                 <%= image_tag asset.object.asset.url(:thumb) %>
+                <%= asset.check_box :_destroy %> Выделите чтобы удалить
               </p>
           <% end %>
       <% end %>

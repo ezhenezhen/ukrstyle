@@ -1,55 +1,17 @@
 <div class="content_l">
   <ul>
-    <li><a href="#">Мебель для ресторанов, кафе и баров</a>
-      <ul>
-        <li><a href="#">Основания для столов</a></li>
-        <li><a href="#">Столешницы</a></li>
-        <li><a href="#">Стулья барные</a></li>
-        <li><a href="#">Стулья</a></li>
-        <li><a href="#">Столы барные</a></li>
-        <li><a href="#">Барные стойки</a></li>
-        <li><a href="#">Дроверы</a></li>
-        <li><a href="#">Полки</a></li>
-        <li><a href="#">Тумбы</a></li>
-        <li><a href="#">Картины</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Мягкая мебель для кафе и ресторанов</a></li>
-    <li><a href="#">Мягкая мебель для дома и офиса</a>
-      <ul>
-        <li><a href="#">Диваны</a></li>
-        <li><a href="#">Угловые диваны</a></li>
-        <li><a href="#">Кресла</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Кресла офисные</a>
-      <ul>
-        <li><a href="#">Кресла для руководителя</a></li>
-        <li><a href="#">Кожаные кресла</a></li>
-        <li><a href="#">Кресла для персонала</a></li>
-        <li><a href="#">Кресла конференционные</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Столы для дома, стулья для дома</a>
-      <ul>
-        <li><a href="#">Столы деревянные</a></li>
-        <li><a href="#">Стулья деревянные</a></li>
-        <li><a href="#">Стулья</a></li>
-        <li><a href="#">Столы стекло</a></li>
-        <li><a href="#">Журнальные столы</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Мебель для спальни</a>
-      <ul>
-        <li><a href="#">Кровати</a></li>
-        <li><a href="#">Кровати деревянные</a></li>
-        <li><a href="#">Спальни</a></li>
-        <li><a href="#">Тумбы</a></li>
-        <li><a href="#">Комоды</a></li>
-        <li><a href="#">Матрасы ортопедические</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Видеонаблюдение и спутниковое телевидение</a></li>
+    <% Category.all.each do |category| %>
+        <li>
+          <%= link_to category.name, category %>
+          <% category.general_types.each do |type| %>
+              <ul>
+                <li>
+                  <%=link_to type.name, type %>
+                </li>
+              </ul>
+          <% end %>
+        </li>
+    <% end %>
   </ul>
 </div>
 

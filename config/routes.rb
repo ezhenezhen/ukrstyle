@@ -1,25 +1,22 @@
 Ukrstyle::Application.routes.draw do
+  root :to => 'main#index'
   resources :line_items
 
-
+  resources :categories
   resources :carts
 
-  resources :categories
+  resources :general_types
 
   resources :files
   resources :galleries
 
 
-  root :to => 'main#index'
+
   resources :products
+
 
   match '/about', :to => 'main#about'
   match '/contact', :to => 'main#contact'
-
-
-
-
-
 
 
   # The priority is based upon order of creation:

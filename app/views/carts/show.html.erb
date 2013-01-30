@@ -1,9 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="portfolio_head">
+  Корзина
+</div>
 
-<% @cart.line_items.each do |item| %>
-    <li><%= item.product.name %></li>
+
+<div class="dynamic_content">
+  <table class="products" width="100%">
+    <col width="120">
+    <col width="60">
+    <col width="60">
+    <col width="60">
+    <col width="120">
+    <col width="20">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Товар</th>
+      <th>Цена</th>
+      <th>Количество</th>
+      <th>Итого</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @cart.line_items.each do |item| %>
+        <tr>
+          <td>
+            <%=image_tag item.product.assets[0].asset.url(:small) if item.product.assets[0] %>
+          </td>
+          <td valign="top">
+            <strong><%= link_to item.product.name, item.product %></strong><br>
+          </td>
+          <td style="min-width: 100px;">
+            <%= item.product.price %> грн.</td>
+          <td>
+            <%= item.product.minimal_quantity %> шт.
+          </td>
+          <td>
+            <%= item.product.price*item.product.minimal_quantity %> грн.
+          </td>
+          <td>
+            <%= button_to "Удалить", item, method: :delete, data: { confirm: 'Вы уверены?' }%>
+          </td>
+        </tr>
     <% end %>
 
+    </tbody>
+  </table>
 
-<%= button_to 'Очистить корзину', @cart,
-              :method => :delete, :confirm => 'Вы уверены?' %>
+</div>
+
+<%= button_to 'Очистить корзину', @cart, :method => :delete, :confirm => 'Вы уверены?' %>

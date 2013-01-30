@@ -11,7 +11,6 @@ end
 gem 'rails', '3.2.11'
 gem 'paperclip'
 gem 'devise', '~> 2.1.2'
-gem 'typus'
 gem 'jquery-rails'
 gem 'will_paginate'
 gem 'cancan'
@@ -21,6 +20,7 @@ gem 'railties'
 gem 'taps'
 gem 'sprockets'
 gem 'russian'
+gem 'annotate'
 
 
 group :assets do

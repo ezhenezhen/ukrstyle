@@ -12,7 +12,6 @@
   </div>
 
   <% @galleries_paginated.each do |gallery| %>
-
       <% if gallery.assets  %>
           <% 1.upto(gallery.assets.size - 1) do |i| %>
               <a class="fancybox" rel=<%= gallery.name %> href="<%= gallery.assets[i].asset.url(:large) %>"
@@ -42,15 +41,8 @@
       </a>
       </div>
 
-
-
   <% end %>
-
 
 
   <%= will_paginate @galleries_paginated %>
   </div>
-
-
-
-

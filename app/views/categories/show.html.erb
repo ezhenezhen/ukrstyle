@@ -1,1 +1,9 @@
-<%= render :template =>  'products/index' %>
+<div class="content_r">
+  <div class="content_r_head"> <%= @category.name %></div>
+  <b class="clearb"></b>
+  <ul class="children">
+  <% @category.general_types.each do |category| %>
+      <li><%= link_to category.name, category %></li>
+  <% end %>
+      </ul>
+</div>

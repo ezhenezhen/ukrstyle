@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225232028) do
+ActiveRecord::Schema.define(:version => 20130117235234) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(:version => 20121225232028) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "categories", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "categories_general_types", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "general_type_id"
+  end
+
   create_table "galleries", :force => true do |t|
     t.string   "name"
     t.datetime "created_at",                    :null => false
@@ -37,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20121225232028) do
   end
 
   create_table "general_types", :force => true do |t|
-    t.string "categories"
+    t.string "name"
   end
 
   create_table "line_items", :force => true do |t|
